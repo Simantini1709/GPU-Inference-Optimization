@@ -186,24 +186,6 @@ GPU_inference/
 
 ---
 
-## 🎓 Interview Talking Points
-
-**"I benchmarked GPU inference optimization techniques on PyTorch:**
-
-- Tested **ResNet-50 and ViT-B/16** with FP32 vs FP16 mixed precision
-- Achieved **53% latency reduction** on ResNet-50 and **76% on ViT** using FP16
-- **Key insight**: Transformers benefit more from FP16 because their large attention matrices fully utilize GPU Tensor Cores, while CNNs are more memory-bound
-- Used **CUDA Events** for precise timing, measured across 100 iterations
-- Observed **4.2x throughput improvement** on ViT-B/16
-- Reduced memory usage by 18% on ResNet-50
-
-**Technical depth:**
-- Understand why: Matrix multiplication patterns, Tensor Core utilization
-- Production-ready: TorchScript, autocast, inference mode
-- Proper benchmarking: Warmup runs, CUDA synchronization, percentile metrics"
-
----
-
 ## 🔗 Resources
 
 - [PyTorch Mixed Precision Docs](https://pytorch.org/docs/stable/amp.html)
